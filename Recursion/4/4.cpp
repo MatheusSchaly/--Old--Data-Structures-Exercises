@@ -35,10 +35,20 @@ void inversao2 () {
 	cout << letra;
 }
 
+void inversao3 () {
+	char letra;
+	cin >> letra;
+	if (letra != '*') {
+		inversao3();
+		cout << letra;
+	}
+}
+
 int main(int argc, char **argv) {
 	string palavraInvertida = inversao("*hello");
 	cout << "inversao: " << palavraInvertida << endl;
 	inversao2();
+	inversao3();
 }
 
 

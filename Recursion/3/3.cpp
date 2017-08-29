@@ -14,7 +14,7 @@ int cont = 0;
 
 int somaMultiplos5 (int x) {
 	cont++;
-	if (x == 5) {
+	if (x == 0) {
 		return x;
 	}
 	return x + somaMultiplos5(x - 5);
