@@ -7,11 +7,12 @@ using namespace std;
 
 class Nodo {
     Nodo *next;
-    int data;
+    int data; // mudar para generics
 public:
+    Nodo(int data = 0, Nodo* next = NULL);
     Nodo* getNext();
     void setNext(Nodo* next);
-    void getData();
+    int getData();
     void setData();
 };
 

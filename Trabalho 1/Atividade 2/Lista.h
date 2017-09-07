@@ -4,18 +4,20 @@
 #include "Nodo.h"
 
 class Lista {
-    Nodo *head, *tail;
+    Nodo *head;
     int tamanho;
+    void aumentaTamanho();
+    void diminuiTamanho();
 public:
     Lista();
     ~Lista();
-    bool verificaElemento();
-    void insereElemento();
-    void retirarElemento();
+    bool verificaElemento(int elemento);
+    void insereElemento(int elemento, int posicao);
+    void retirarElemento(int posicao);
     void mostratLista();
 
     Nodo* getHead();
-    Nodo* getTail();
+    void setHead(Nodo* head);
     int getTamanho();
 };
 
