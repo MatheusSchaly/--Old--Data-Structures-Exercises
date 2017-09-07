@@ -12,12 +12,13 @@ class ListaEstatica {
 public:
     ListaEstatica criaLista();
     void destroiLista();
-    bool verificaElemento();
-    bool verificaElementosLista();
-    void inserirElemento();
+    bool verificaElemento(char elemento);
+    bool verificaElementosLista(ListaEstatica listaEstatica);
+    void inserirElemento(int elemento);
     void inserirElementosLista();
     void retirarElemento();
     void mostraLista();
+    int getNumeroElementos();
 };
 
 #endif /* LISTAESTATICA_H_ */

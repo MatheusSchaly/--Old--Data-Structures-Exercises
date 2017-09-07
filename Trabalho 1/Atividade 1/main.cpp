@@ -4,7 +4,7 @@ int main()
 {
     cout << "\nTeste\n";
 
-    ListaEstatica listaEstatica;
+    ListaEstatica listaEstatica();
 
     return 0;
 }
