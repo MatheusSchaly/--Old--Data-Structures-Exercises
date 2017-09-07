@@ -1,9 +1,7 @@
-#include <iostream>
-
-using namespace std;
+#include "Lista.h"
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cout << "\n\nHello world!\n\n" << endl;
     return 0;
 }

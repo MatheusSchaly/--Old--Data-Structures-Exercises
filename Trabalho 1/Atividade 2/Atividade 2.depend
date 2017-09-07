@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1504815707 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/main.cpp
+	"Lista.h"
+
+1504818950 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.cpp
+	"Lista.h"
+
+1504818948 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.h
+	"Nodo.h"
+
+1504819110 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.h
+	<iostream>
+
+1504815992 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.cpp
+	"Nodo.h"
+
