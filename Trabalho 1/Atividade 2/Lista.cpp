@@ -24,16 +24,29 @@ bool Lista::verificaElemento(int elemento) {
     }
 }
 
-void Lista::insereElemento(int elemento, int posicao) {
-    if (posicao > getTamanho() + 1) {
+void Lista::insereElemento(int elemento, int posicao) { // arrumar
+    if (posicao > getTamanho() + 1 || posicao < 1) {
         return; // ou verificar com um if (ou try catch) antes de enviar para este metodo
     }
+    if (getTamanho() == 0) {
+        Nodo *novoNodo = new Nodo(elemento);
+        novoNodo -> setNext(novoNodo);
+        setHead(novoNodo);
+        aumentaTamanho();
+        return;
+    }
+    if (posicao == 1) {
+        posicao = getTamanho();
+    }
     Nodo *temp = getHead();
-    for (int i = 0; i != posicao; i++) {
+    for (int i = 0; i < posicao - 2; i++) {
         temp = temp -> getNext();
     }
     Nodo *novoNodo = new Nodo(elemento, temp -> getNext());
     temp -> setNext(novoNodo);
+    if (posicao == getTamanho()) {
+        setHead(novoNodo);
+    }
     aumentaTamanho();
 }
 
@@ -42,7 +55,7 @@ void Lista::retirarElemento(int posicao) {
         return;
     }
     if (posicao == 1) {
-        posicao = 4;
+        posicao = getTamanho() + 1;
     }
     Nodo *temp = getHead(), *prev;
     for (int i = 0; i != posicao - 1; i++) {
@@ -52,12 +65,16 @@ void Lista::retirarElemento(int posicao) {
     prev -> setNext(temp -> getNext());
     delete temp;
     diminuiTamanho();
+    if (getTamanho() == 0) {
+        setHead(NULL);
+    }
 }
 
 void Lista::mostratLista() {
     Nodo *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
         cout << temp -> getData() << " ";
+        temp = temp -> getNext();
     }
     cout << "\nTamanho: " << getTamanho() << endl;
 }
