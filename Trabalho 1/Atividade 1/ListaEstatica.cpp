@@ -42,6 +42,8 @@ void ListaEstatica::inserirElemento(int elemento) {
             return;
         }
     }
+    elementos[0] = 444;
+    cout << elementos[0] << endl;
     getElementos()[getNumeroElementos()] = elemento;
     getOcupados()[getNumeroElementos()] = 1;
     incrementaNumeroElementos();
