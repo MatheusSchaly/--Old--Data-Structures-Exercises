@@ -8,16 +8,16 @@ Lista::Lista() {
 
 Lista::~Lista() {
     Nodo *temp = getHead();
-    while(getHead() != NULL) {
-        delete temp;
+    for (int i = 0; i < getTamanho(); i++) {
         setHead(getHead() -> getNext());
+        delete temp;
         temp = getHead();
     }
 }
 
 bool Lista::verificaElemento(int elemento) {
     Nodo *temp = getHead();
-    for(int i = 0; i < getTamanho(); i++) {
+    for (int i = 0; i < getTamanho(); i++) {
         if (temp -> getData() == elemento) {
             return true;
         }
