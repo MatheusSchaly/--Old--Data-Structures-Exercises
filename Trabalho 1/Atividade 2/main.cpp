@@ -3,6 +3,8 @@
 int main()
 {
     Lista myList;
+    //Testes
+{ /*
     // Testa insere
 //    myList.insereElemento(2, 1); // 2
 //    myList.mostraLista();
@@ -20,6 +22,7 @@ int main()
 //    myList.mostraLista();
 //    cout << "\nHead: " << myList.getHead() -> getData() << endl; // 0
 //    cout << "Tail: " << myList.getTail() -> getData() << endl; // 6
+
     // Testa remove
 //    myList.insereElemento(1, 1); // 1
 //    myList.removeElemento(1); //
@@ -51,14 +54,18 @@ int main()
 //    myList.mostraLista();
 //    myList.removeElemento(1); //
 //    myList.mostraLista();
+
     // Testa verifica
-//myList.insereElemento(5, 1); // 5
-//myList.insereElemento(10, 2); // 5 10
-//myList.insereElemento(15, 3); // 5 10 15
-//cout << myList.verificaElemento(5) << endl; // 1
-//cout << myList.verificaElemento(10) << endl; // 1
-//cout << myList.verificaElemento(15) << endl; // 1
-//cout << myList.verificaElemento(20) << endl; // 0
-//myList.removeElemento(1); // 10 15
-//cout << myList.verificaElemento(5) << endl; // 0
+//    myList.insereElemento(5, 1); // 5
+//    myList.insereElemento(10, 2); // 5 10
+//    myList.insereElemento(15, 3); // 5 10 15
+//    cout << myList.verificaElemento(5) << endl; // 1
+//    cout << myList.verificaElemento(10) << endl; // 1
+//    cout << myList.verificaElemento(15) << endl; // 1
+//    cout << myList.verificaElemento(20) << endl; // 0
+//    myList.removeElemento(1); // 10 15
+//    cout << myList.verificaElemento(5) << endl; // 0
+*/
+}
+
 }
