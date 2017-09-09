@@ -1,9 +1,10 @@
-#include "Lista.h"
+// #include "Jogador.h"
+#include "Lista.h" // acabar implementacao de lista primeiro, incluir generics (templates)
 
 int main()
 {
     Lista myList;
-    //Testes
+    //Testes Lista MINIMIZE
 { /*
     // Testa insere
 //    myList.insereElemento(2, 1); // 2

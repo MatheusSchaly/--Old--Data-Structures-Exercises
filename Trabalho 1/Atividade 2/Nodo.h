@@ -16,4 +16,4 @@ public:
     void setData();
 };
 
-#endif // LISTA_H_INCLUDED
+#endif // NODO_H_INCLUDED

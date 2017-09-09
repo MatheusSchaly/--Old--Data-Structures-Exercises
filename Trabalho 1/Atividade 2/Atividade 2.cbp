@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Carta.cpp" />
+		<Unit filename="Carta.h" />
+		<Unit filename="Jogador.cpp" />
+		<Unit filename="Jogador.h" />
 		<Unit filename="Lista.cpp" />
 		<Unit filename="Lista.h" />
 		<Unit filename="Nodo.cpp" />
