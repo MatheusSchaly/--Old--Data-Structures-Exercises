@@ -1,11 +1,13 @@
 #include "ListaEstatica.h"
 
-void ListaEstatica::criaLista() {
+ListaEstatica::ListaEstatica()
+{
     numeroElementos = 0;
-}
-
-void ListaEstatica::destroiLista() {
-    delete this;
+    for (int i=0;i<100;i++)
+    {
+        elementos[i] = NULL;
+        ocupados[i] = 0;
+    }
 }
 
 bool ListaEstatica::verificaElemento(char elemento) {
@@ -14,6 +16,7 @@ bool ListaEstatica::verificaElemento(char elemento) {
             return true;
         }
     }
+    return false;
 }
 
 bool ListaEstatica::verificaElementosLista(ListaEstatica listaEstatica) {
@@ -34,7 +37,7 @@ void ListaEstatica::inserirElemento(int elemento) {
     if (getNumeroElementos() == 100) {
         return;
     }
-    for (int i = 0; i < getNumeroElementos(); i++) {
+    for (int i = 0; i <= getNumeroElementos(); i++) {
         if (getOcupados()[i] == 0) {
             getElementos()[i] = elemento;
             getOcupados()[i] = 1;
@@ -42,11 +45,6 @@ void ListaEstatica::inserirElemento(int elemento) {
             return;
         }
     }
-    elementos[0] = 444;
-    cout << elementos[0] << endl;
-    getElementos()[getNumeroElementos()] = elemento;
-    getOcupados()[getNumeroElementos()] = 1;
-    incrementaNumeroElementos();
 }
 
 void ListaEstatica::inserirElementosLista(ListaEstatica listaEstatica) {
@@ -68,12 +66,14 @@ void ListaEstatica::retirarElemento(int elemento) {
 }
 
 void ListaEstatica::mostraLista() {
+    int cont = 0;
     for (int i = 0; i < getNumeroElementos(); i++) {
         if (getOcupados()[i] == 1) {
-            cout << getElementos()[i] << endl;
+            cout << getElementos()[i] << " ";
+            cont++;
         }
     }
-    cout << "Tamanho: " << getNumeroElementos() << endl;
+    cout << endl << "Tamanho: " << cont << endl;
 }
 
 void ListaEstatica::incrementaNumeroElementos() {

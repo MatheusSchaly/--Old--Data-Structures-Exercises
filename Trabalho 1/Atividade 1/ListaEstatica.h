@@ -11,19 +11,17 @@ class ListaEstatica {
     int ocupados [100];
     void incrementaNumeroElementos();
     void decrementaNumeroElementos();
+    int getNumeroElementos();
+    char* getElementos();
+    int* getOcupados();
 public:
-    void criaLista(); // ou usar constructor?
-    void destroiLista(); // ou usar destructor?
+    ListaEstatica();
     bool verificaElemento(char elemento);
     bool verificaElementosLista(ListaEstatica listaEstatica);
     void inserirElemento(int elemento);
     void inserirElementosLista(ListaEstatica listaEstatica);
     void retirarElemento(int elemento);
     void mostraLista();
-
-    int getNumeroElementos();
-    char* getElementos();
-    int* getOcupados();
 };
 
 #endif /* LISTAESTATICA_H_ */
