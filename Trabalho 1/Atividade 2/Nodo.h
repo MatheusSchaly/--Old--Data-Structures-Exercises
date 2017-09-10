@@ -1,19 +1,21 @@
 #ifndef NODO_H_INCLUDED
 #define NODO_H_INCLUDED
 
+#include "Carta.h"
+
 #include <iostream>
 
 using namespace std;
 
+template <typename T>
 class Nodo {
-    Nodo *next;
-    int data; // mudar para generics
+    Nodo<T> *next;
+    T data; // mudar para generics
 public:
-    Nodo(int data = 0, Nodo* next = NULL);
-    Nodo* getNext();
-    void setNext(Nodo* next);
-    int getData();
-    void setData();
+    Nodo(T=NULL, Nodo<T>* = NULL);
+    Nodo<T>* getNext();
+    void setNext(Nodo<T>*);
+    T getData();
 };
 
 #endif // NODO_H_INCLUDED

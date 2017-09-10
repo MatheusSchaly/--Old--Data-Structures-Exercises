@@ -28,3 +28,34 @@
 1505007913 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.cpp
 	"Jogador.h"
 
+1505070474 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\carta.cpp
+	"Carta.h"
+
+1505070626 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\carta.h
+	<iostream>
+
+1505064657 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.cpp
+	"Jogador.h"
+
+1505064652 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.h
+	"Carta.h"
+	"Lista.h"
+
+1505072526 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.h
+	"Nodo.h"
+
+1505072215 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\nodo.h
+	"Carta.h"
+	<iostream>
+
+1505072591 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.cpp
+	"Lista.h"
+
+1505072495 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\main.cpp
+	"Lista.h"
+	"Nodo.h"
+	"Carta.h"
+
+1505072591 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\nodo.cpp
+	"Nodo.h"
+

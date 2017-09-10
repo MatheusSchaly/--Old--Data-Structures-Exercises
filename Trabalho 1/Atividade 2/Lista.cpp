@@ -1,13 +1,15 @@
 #include "Lista.h"
 
-Lista::Lista() {
+template <typename T>
+Lista<T>::Lista() {
     head = NULL;
     tail = NULL;
     tamanho = 0;
 }
 
-Lista::~Lista() {
-    Nodo *temp = getHead();
+template <typename T>
+Lista<T>::~Lista() {
+    Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
         setHead(getHead() -> getNext());
         delete temp;
@@ -15,8 +17,9 @@ Lista::~Lista() {
     }
 }
 
-bool Lista::verificaElemento(int elemento) {
-    Nodo *temp = getHead();
+/*template <typename T>
+bool Lista<T>::verificaElemento(T elemento) {
+    Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
         if (temp -> getData() == elemento) {
             return true;
@@ -24,11 +27,12 @@ bool Lista::verificaElemento(int elemento) {
         temp = temp -> getNext();
     }
     return false;
-}
+}*/
 
-void Lista::insereElemento(int elemento, int posicao) {
+template <typename T>
+void Lista<T>::insereElemento(T elemento, int posicao) {
     if (getTamanho() == 0) {
-        Nodo *novoNodo = new Nodo(elemento);
+        Nodo<T> *novoNodo = new Nodo<T>(elemento);
         novoNodo -> setNext(novoNodo);
         setTail(novoNodo);
         setHead(novoNodo);
@@ -36,7 +40,7 @@ void Lista::insereElemento(int elemento, int posicao) {
         return;
     }
     if (posicao == 1 || posicao == getTamanho() + 1) {
-        Nodo *novoNodo = new Nodo(elemento, getHead());
+        Nodo<T> *novoNodo = new Nodo<T>(elemento, getHead());
         getTail() -> setNext(novoNodo);
         if (posicao == 1) {
             setHead(novoNodo);
@@ -47,16 +51,17 @@ void Lista::insereElemento(int elemento, int posicao) {
         aumentaTamanho();
         return;
     }
-    Nodo *temp = head;
+    Nodo<T> *temp = head;
     for (int i = 0; i < posicao - 2; i++) {
         temp = temp -> getNext();
     }
-    Nodo *novoNodo = new Nodo(elemento, temp -> getNext());
+    Nodo<T> *novoNodo = new Nodo<T>(elemento, temp -> getNext());
     temp -> setNext(novoNodo);
     aumentaTamanho();
 }
 
-void Lista::removeElemento(int posicao) {
+template <typename T>
+void Lista<T>::removeElemento(int posicao) {
     if (getTamanho() == 1) {
         delete getHead();
         setHead(NULL);
@@ -71,7 +76,7 @@ void Lista::removeElemento(int posicao) {
         diminuiTamanho();
         return;
     }
-    Nodo *temp = getHead();
+    Nodo<T> *temp = getHead();
     if (posicao == getTamanho()) {
         for (int i = 0; i < getTamanho() - 2; i++) {
             temp = temp -> getNext();
@@ -82,7 +87,7 @@ void Lista::removeElemento(int posicao) {
         diminuiTamanho();
         return;
     }
-    Nodo *prev;
+    Nodo<T> *prev;
     for (int i = 0; i < posicao - 1; i++) {
         prev = temp;
         temp = temp -> getNext();
@@ -93,8 +98,9 @@ void Lista::removeElemento(int posicao) {
     diminuiTamanho();
 }
 
-void Lista::mostraLista() {
-    Nodo *temp = getHead();
+template <typename T>
+void Lista<T>::mostraLista() {
+    Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
         cout << temp -> getData() << " ";
         temp = temp -> getNext();
@@ -102,30 +108,42 @@ void Lista::mostraLista() {
     cout << "\nTamanho: " << getTamanho() << endl;
 }
 
-void Lista::aumentaTamanho() {
+template <typename T>
+void Lista<T>::aumentaTamanho() {
     tamanho++;
 }
 
-void Lista::diminuiTamanho() {
+template <typename T>
+void Lista<T>::diminuiTamanho() {
     tamanho--;
 }
 
-Nodo* Lista::getHead() {
+template <typename T>
+Nodo<T>* Lista<T>::getHead() {
     return head;
 }
 
-void Lista::setHead(Nodo* head) {
+template <typename T>
+void Lista<T>::setHead(Nodo<T>* head) {
     this -> head = head;
 }
 
-Nodo* Lista::getTail() {
+template <typename T>
+Nodo<T>* Lista<T>::getTail() {
     return tail;
 }
 
-void Lista::setTail(Nodo* tail) {
+template <typename T>
+void Lista<T>::setTail(Nodo<T>* tail) {
     this -> tail = tail;
 }
 
-int Lista::getTamanho() {
+template <typename T>
+int Lista<T>::getTamanho() {
     return tamanho;
 }
+
+template class Lista<int>;
+template class Lista<float>;
+template class Lista<string>;
+//template class Lista<Carta>;         //Adicionar Sobrecarga do operador "==" e "<<" em Carta.

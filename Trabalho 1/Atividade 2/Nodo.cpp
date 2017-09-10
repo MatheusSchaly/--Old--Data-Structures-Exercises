@@ -1,22 +1,27 @@
 #include "Nodo.h"
 
-Nodo::Nodo(int data, Nodo* next) {
+template <typename T>
+Nodo<T>::Nodo(T data, Nodo* next) {
     this -> data = data;
     this -> next = next;
 }
 
-Nodo* Nodo::getNext() {
+template <typename T>
+Nodo<T>* Nodo<T>::getNext() {
     return next;
 }
 
-void Nodo::setNext(Nodo* next) {
+template <typename T>
+void Nodo<T>::setNext(Nodo<T>* next) {
     this -> next = next;
 }
 
-int Nodo::getData() {
+template <typename T>
+T Nodo<T>::getData() {
     return data;
 }
 
-void Nodo::setData() {
-    this -> data = data;
-}
+template class Nodo<float>;
+template class Nodo<string>;
+template class Nodo<int>;
+//template class Nodo<Carta>; //Implementar sobrecarga de operador "="

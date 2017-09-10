@@ -3,23 +3,24 @@
 
 #include "Nodo.h"
 
+template <typename T>
 class Lista {
-    Nodo *head, *tail;
+    Nodo<T> *head, *tail;
     int tamanho;
     void aumentaTamanho();
     void diminuiTamanho();
 public:
-    Lista();
-    ~Lista();
-    bool verificaElemento(int elemento);
-    void insereElemento(int elemento, int posicao);
-    void removeElemento(int posicao);
+    Lista<T>();
+    ~Lista<T>();
+    //bool verificaElemento(T);
+    void insereElemento(T, int);
+    void removeElemento(int);
     void mostraLista();
 
-    Nodo* getHead();
-    void setHead(Nodo* head);
-    Nodo* getTail();
-    void setTail(Nodo* tail);
+    Nodo<T>* getHead();
+    void setHead(Nodo<T>*);
+    Nodo<T>* getTail();
+    void setTail(Nodo<T>*);
     int getTamanho();
 };
 

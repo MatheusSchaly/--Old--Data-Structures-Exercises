@@ -1,6 +1,6 @@
 #include "Jogador.h"
 
-void Jogador::addCarta() {
+/*void Jogador::addCarta() {
     Carta novaCarta;
 //    listaCarta.insereElemento(novaCarta, getQuantCartas());
     addQuantCartas();
@@ -16,4 +16,4 @@ int Jogador::getQuantCartas() {
 
 void Jogador::addQuantCartas() {
     quantCartas++;
-}
+}*/

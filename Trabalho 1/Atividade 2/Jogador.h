@@ -4,14 +4,14 @@
 #include "Carta.h"
 #include "Lista.h"
 
-class Jogador {
+/*class Jogador {
 //    Lista<Carta> listaCarta;
     int quantCartas;
-    void addQuantCartas();
+    void addQuant funkCartas();
 public:
     void addCarta();
     Lista getListaCarta();
     int getQuantCartas();
-};
+};*/
 
 #endif // JOGADOR_H_INCLUDED
