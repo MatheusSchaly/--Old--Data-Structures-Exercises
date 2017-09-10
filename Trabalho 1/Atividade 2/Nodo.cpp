@@ -24,4 +24,4 @@ T Nodo<T>::getData() {
 template class Nodo<float>;
 template class Nodo<string>;
 template class Nodo<int>;
-//template class Nodo<Carta>; //Implementar sobrecarga de operador "="
+template class Nodo<Carta>; //Implementar sobrecarga de operador "="

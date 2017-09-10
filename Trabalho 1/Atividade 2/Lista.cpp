@@ -17,17 +17,18 @@ Lista<T>::~Lista() {
     }
 }
 
-/*template <typename T>
+template <typename T>
 bool Lista<T>::verificaElemento(T elemento) {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
-        if (temp -> getData() == elemento) {
+        T aux = temp -> getData();
+        if (aux == elemento) {
             return true;
         }
         temp = temp -> getNext();
     }
     return false;
-}*/
+}
 
 template <typename T>
 void Lista<T>::insereElemento(T elemento, int posicao) {
@@ -102,7 +103,8 @@ template <typename T>
 void Lista<T>::mostraLista() {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
-        cout << temp -> getData() << " ";
+        T aux = temp->getData();
+        cout << aux << " ";
         temp = temp -> getNext();
     }
     cout << "\nTamanho: " << getTamanho() << endl;
@@ -146,4 +148,4 @@ int Lista<T>::getTamanho() {
 template class Lista<int>;
 template class Lista<float>;
 template class Lista<string>;
-//template class Lista<Carta>;         //Adicionar Sobrecarga do operador "==" e "<<" em Carta.
+template class Lista<Carta>;         //Adicionar Sobrecarga do operador "==" e "<<" em Carta.

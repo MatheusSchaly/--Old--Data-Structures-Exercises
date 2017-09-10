@@ -10,9 +10,9 @@ using namespace std;
 template <typename T>
 class Nodo {
     Nodo<T> *next;
-    T data; // mudar para generics
+    T data;
 public:
-    Nodo(T=NULL, Nodo<T>* = NULL);
+    Nodo(T = NULL, Nodo<T>* = NULL);
     Nodo<T>* getNext();
     void setNext(Nodo<T>*);
     T getData();

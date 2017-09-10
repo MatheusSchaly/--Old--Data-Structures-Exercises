@@ -4,33 +4,33 @@
 #include "Carta.h"
 
 int main() {
-    Lista<int> mylist;
-    mylist.insereElemento(1,1);
-    mylist.insereElemento(2,2);
-    mylist.insereElemento(3,3);
-    mylist.mostraLista();
+//    Lista<int> mylist;
+//    mylist.insereElemento(1,1);
+//    mylist.insereElemento(2,2);
+//    mylist.insereElemento(3,3);
+//    mylist.mostraLista();
+//
+//    Lista<float> mylist1;
+//    mylist1.insereElemento(1.5,1);
+//    mylist1.insereElemento(2.3,2);
+//    mylist1.insereElemento(3.7,3);
+//    mylist1.mostraLista();
+//
+//    Lista<string> mylist2;
+//    mylist2.insereElemento("um",1);
+//    mylist2.insereElemento("dois",2);
+//    mylist2.insereElemento("tres",3);
+//    mylist2.mostraLista();
 
-    Lista<float> mylist1;
-    mylist1.insereElemento(1.5,1);
-    mylist1.insereElemento(2.3,2);
-    mylist1.insereElemento(3.7,3);
-    mylist1.mostraLista();
-
-    Lista<string> mylist2;
-    mylist2.insereElemento("um",1);
-    mylist2.insereElemento("dois",2);
-    mylist2.insereElemento("tres",3);
-    mylist2.mostraLista();
-
-
-    /*Carta carta1(10,2), carta2(13,2), carta3(1,4);
+    Carta carta1(10, "copas"), carta2(13, "paus"), carta3(1, "espadas");
     Lista<Carta> mylist3;
-    mylist3.insereElemento(carta1);
-    mylist3.insereElemento(carta2);
-    mylist3.insereElemento(carta3);
-    cout << mylist3.getHead().getData().getValor();
-    cout << mylist3.getTail().getData().getValor();*/
-
+    mylist3.insereElemento(carta1,1);
+    mylist3.insereElemento(carta2,2);
+    mylist3.insereElemento(carta3,3);
+    mylist3.mostraLista();
+    cout << mylist3.verificaElemento(carta2);
+    mylist3.removeElemento(2);
+    cout << mylist3.verificaElemento(carta2);
 
     // Testa insere
 //    myList.insereElemento(2, 1); // 2

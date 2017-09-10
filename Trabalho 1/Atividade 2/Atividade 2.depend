@@ -1,31 +1,33 @@
 # depslib dependency file v1.0
-1505007913 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/main.cpp
+1505082583 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/main.cpp
 	"Lista.h"
-
-1505008039 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.cpp
-	"Lista.h"
-
-1505007913 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.h
 	"Nodo.h"
-
-1505007913 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.h
-	<iostream>
-
-1505007913 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.cpp
-	"Nodo.h"
-
-1505007913 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.cpp
-	<cstdlib>
 	"Carta.h"
 
-1505007913 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.h
+1505082028 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.cpp
+	"Lista.h"
+
+1505080315 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.h
+	"Nodo.h"
+
+1505080666 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.h
+	"Carta.h"
 	<iostream>
 
-1505007913 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.h
+1505079597 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.cpp
+	"Nodo.h"
+
+1505082114 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.cpp
+	"Carta.h"
+
+1505082251 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.h
+	<iostream>
+
+1505073072 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.h
 	"Carta.h"
 	"Lista.h"
 
-1505007913 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.cpp
+1505073072 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.cpp
 	"Jogador.h"
 
 1505070474 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\carta.cpp
