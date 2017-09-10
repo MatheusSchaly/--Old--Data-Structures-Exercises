@@ -23,6 +23,7 @@ bool Lista::verificaElemento(int elemento) {
         }
         temp = temp -> getNext();
     }
+    return false;
 }
 
 void Lista::insereElemento(int elemento, int posicao) {
@@ -56,8 +57,8 @@ void Lista::insereElemento(int elemento, int posicao) {
 }
 
 void Lista::removeElemento(int posicao) {
-    if (getTamanho() == 0) {
-        //delete getHead();
+    if (getTamanho() == 1) {
+        delete getHead();
         setHead(NULL);
         setTail(NULL);
         diminuiTamanho();
@@ -65,7 +66,7 @@ void Lista::removeElemento(int posicao) {
     }
     if (posicao == 1) {
         tail -> setNext(getHead() -> getNext());
-        //delete getHead();
+        delete getHead();
         setHead(getTail() -> getNext());
         diminuiTamanho();
         return;
@@ -76,7 +77,7 @@ void Lista::removeElemento(int posicao) {
             temp = temp -> getNext();
         }
         temp -> setNext(getHead());
-        //delete getTail();
+        delete getTail();
         setTail(temp);
         diminuiTamanho();
         return;
@@ -88,7 +89,7 @@ void Lista::removeElemento(int posicao) {
     }
     prev -> setNext(temp -> getNext());
     setHead(prev);
-    //delete temp;
+    delete temp;
     diminuiTamanho();
 }
 

@@ -1,11 +1,10 @@
 // #include "Jogador.h"
 #include "Lista.h" // acabar implementacao de lista primeiro, incluir generics (templates)
 
-int main()
-{
+int main() {
+
     Lista myList;
-    //Testes Lista MINIMIZE
-{ /*
+
     // Testa insere
 //    myList.insereElemento(2, 1); // 2
 //    myList.mostraLista();
@@ -66,7 +65,6 @@ int main()
 //    cout << myList.verificaElemento(20) << endl; // 0
 //    myList.removeElemento(1); // 10 15
 //    cout << myList.verificaElemento(5) << endl; // 0
-*/
-}
-
+//    myList.removeElemento(2); // 10
+//    cout << myList.verificaElemento(15) << endl; // 0
 }
