@@ -12,7 +12,7 @@ class Lista {
 public:
     Lista<T>();
     ~Lista<T>();
-    bool verificaElemento(T);
+    //bool verificaElemento(T);
     void insereElemento(T, int);
     void removeElemento(int);
     void mostraLista();

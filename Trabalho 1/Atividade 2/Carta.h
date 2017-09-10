@@ -7,14 +7,13 @@ using namespace std;
 
 class Carta {
     int valor;
-    string naipe;
+    int naipe;
 public:
     Carta();
-    Carta(int valor, string naipe);
+    Carta(int, int);
     int getValor();
-    string getNaipe();
-    friend bool operator == (Carta &carta1, Carta &carta2);
-    friend ostream& operator << (ostream &out, Carta &carta);
+    int getNaipe();
+    friend ostream& operator<<(ostream&,Carta&);
 };
 
 #endif // CARTA_H_INCLUDED

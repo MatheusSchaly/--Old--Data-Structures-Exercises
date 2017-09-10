@@ -3,9 +3,9 @@
 
 #include "Carta.h"
 #include "Lista.h"
-
-/*class Jogador {
-//    Lista<Carta> listaCarta;
+/*
+class Jogador {
+    Lista<Carta> listaCarta;
     int quantCartas;
     void addQuant funkCartas();
 public:
