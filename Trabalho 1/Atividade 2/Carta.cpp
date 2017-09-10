@@ -1,6 +1,10 @@
 #include "Carta.h"
 
-ostream& operator<<(ostream &out, Carta &carta)
+bool operator == (Carta &carta1, Carta &carta2) {
+    return carta1.getValor() == carta2.getValor();
+}
+
+ostream& operator << (ostream &out, Carta &carta)
 {
     cout << carta.getValor() << "  " << carta.getNaipe();
     return out;
@@ -8,7 +12,7 @@ ostream& operator<<(ostream &out, Carta &carta)
 
 Carta::Carta(){}
 
-Carta::Carta(int valor, int naipe) {
+Carta::Carta(int valor, string naipe) {
     this->valor = valor;
     this->naipe = naipe;
 }
@@ -17,7 +21,7 @@ int Carta::getValor() {
     return valor;
 }
 
-int Carta::getNaipe()
+string Carta::getNaipe()
 {
     return naipe;
 }

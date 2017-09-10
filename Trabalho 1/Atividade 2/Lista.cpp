@@ -17,17 +17,18 @@ Lista<T>::~Lista() {
     }
 }
 
-/*template <typename T>
+template <typename T>
 bool Lista<T>::verificaElemento(T elemento) {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
-        if (temp -> getData() == elemento) {
+        T aux = temp->getData();
+        if (aux == elemento) {
             return true;
         }
         temp = temp -> getNext();
     }
     return false;
-}*/
+}
 
 template <typename T>
 void Lista<T>::insereElemento(T elemento, int posicao) {
