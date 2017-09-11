@@ -107,7 +107,6 @@ void Lista<T>::mostraLista() {
         cout << test << " ";
         temp = temp -> getNext();
     }
-    cout << "\nTamanho: " << getTamanho() << endl;
 }
 
 template <typename T>
@@ -149,7 +148,7 @@ template <typename T>
 T Lista<T>::getElemento(int posicao)
 {
     Nodo<T>* temp = getHead();
-    for (int i=0;i<posicao;i++)
+    for (int i=1;i<posicao;i++)
     {
         temp = temp->getNext();
     }

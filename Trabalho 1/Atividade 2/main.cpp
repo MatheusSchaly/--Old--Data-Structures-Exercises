@@ -14,13 +14,14 @@ void criaMonte (Lista<Carta> &monte) {
     }
 }
 
-void mostraMesa (Jogador usuario, Jogador ia) {
+void mostraMesa (Jogador &usuario, Jogador &ia) {
     cout << "\nCartas dos jogadores:\n";
     cout << usuario.getNome() << ":" << endl;
-    usuario.mostraMao();
+    usuario.getMao().mostraLista();
     cout << endl << ia.getNome() << ":"<< endl;
-    Carta carta = ia.getMao().getElemento(1);
-    cout << carta;
+    ia.getMao().mostraLista();
+    //Carta carta = ia.getMao().getElemento(1);
+    //cout << carta;
 }
 
 int leMenu () {
@@ -34,7 +35,7 @@ int leMenu () {
     return opcao;
 }
 
-Jogador* checaVencedor (Jogador usuario, Jogador ia) {
+Jogador* checaVencedor (Jogador &usuario, Jogador &ia) {
     if (usuario.getPontuacao() > 21) {
         return &ia;
     }
@@ -71,13 +72,21 @@ int main() {
         }
     }
 
-    for (int i = 0; i < 2; i++) {
+    for (int i = 1; i < 3; i++) {
+        Carta carta = cartasInicio.getElemento(i);
+        cout << carta;
         usuario.addCarta(cartasInicio.getElemento(i));
     }
 
-    for (int i = 2; i < 4; i++) {
+    for (int i = 3; i < 5; i++) {
+        Carta carta = cartasInicio.getElemento(i);
+        cout << carta;
         ia.addCarta(cartasInicio.getElemento(i));
     }
+
+    cout << endl << endl << endl << endl;
+    monte.mostraLista();
+    cout << endl << endl << endl << endl;
 
     int opcao, randomAux = -1;
     Jogador *vencedor;
@@ -85,11 +94,11 @@ int main() {
     do {
         mostraMesa(usuario, ia);
         opcao = leMenu();
-        cout << randomAux;
         if (opcao == 1) {
             randomAux++;
             randomInt = rand() % (48 - randomAux) + 1; // 1 a (48 - randomAux)
             carta = monte.getElemento(randomInt);
+            cout << carta;
             usuario.addCarta(carta);
             monte.removeElemento(randomInt);
         }
@@ -105,8 +114,9 @@ int main() {
         vencedor = checaVencedor(usuario, ia);
     } while(vencedor == NULL);
 
-    cout << vencedor -> getNome() << "venceu com " << vencedor -> getPontuacao() << " pontos!" endl;
+    cout << vencedor -> getNome() << " venceu com " << vencedor -> getPontuacao() << " pontos!" << endl;
 
+    return 0;
 }
 
     /*Jogador player("Mauricio");

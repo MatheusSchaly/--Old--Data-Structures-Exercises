@@ -16,13 +16,6 @@ Lista<Carta>& Jogador::getMao() {
     return mao;
 }
 
-void Jogador::mostraMao() {
-    for (int i = 0; i < getMao().getTamanho(); i++) {
-        Carta carta = getMao().getElemento(i);
-        cout << carta;
-    }
-}
-
 void Jogador::addPontuacao(int valor)
 {
     if (valor>10)
