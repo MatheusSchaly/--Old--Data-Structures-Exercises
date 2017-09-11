@@ -1,19 +1,58 @@
 #include "Jogador.h"
 
-/*void Jogador::addCarta() {
-    Carta novaCarta;
-//    listaCarta.insereElemento(novaCarta, getQuantCartas());
-    addQuantCartas();
+Jogador::Jogador(string nome)
+{
+    this->nome = nome;
+    this->pontuacao = 0;
 }
 
-Lista Jogador::getListaCarta() {
-//    return listaCarta;
+void Jogador::addCarta(Carta carta)
+{
+    mao.insereElemento(carta,mao.getTamanho()+1);
+    addPontuacao(carta.getValor());
 }
 
-int Jogador::getQuantCartas() {
-    return quantCartas;
+Lista<Carta>& Jogador::getMao() {
+    return mao;
 }
 
-void Jogador::addQuantCartas() {
-    quantCartas++;
-}*/
+void Jogador::addPontuacao(int valor)
+{
+    if (valor>10)
+    {
+        pontuacao += 10;
+    }
+    else
+    {
+        if (valor == 1)
+        {
+            pontuacao += 11;
+        }
+        else
+        {
+            pontuacao += valor;
+        }
+    }
+
+    if (pontuacao>21)
+    {
+        for (int i=1;i<getMao().getTamanho()+1;i++)
+        {
+            if (mao.getElemento(i).getValor() == 1)
+            {
+                pontuacao -= 10;
+                break;
+            }
+        }
+    }
+}
+
+int Jogador::getPontuacao()
+{
+    return pontuacao;
+}
+
+string Jogador::getNome()
+{
+    return nome;
+}

@@ -145,7 +145,18 @@ int Lista<T>::getTamanho() {
     return tamanho;
 }
 
+template <typename T>
+T Lista<T>::getElemento(int posicao)
+{
+    Nodo<T>* temp = getHead();
+    for (int i=0;i<posicao;i++)
+    {
+        temp = temp->getNext();
+    }
+    return temp->getData();
+}
+
 template class Lista<int>;
 template class Lista<float>;
 template class Lista<string>;
-template class Lista<Carta>;         //Adicionar Sobrecarga do operador "==" e "<<" em Carta.
+template class Lista<Carta>;

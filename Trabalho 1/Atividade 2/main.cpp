@@ -1,20 +1,22 @@
-// #include "Jogador.h"
-#include "Lista.h" // acabar implementacao de lista primeiro, incluir generics (templates)
+#include "Jogador.h"
+#include "Lista.h"
 #include "Nodo.h"
 #include "Carta.h"
 
 int main() {
 
-    /*Carta carta1(10, 4);
-    Carta carta2(11, 3);
-    Carta *carta3;
-    carta3 = new Carta(55,5);
-    cout << carta1 << endl;
-    cout << carta2 << endl;
-    cout << *carta3 << endl;*/
+    /*Jogador player("Mauricio");
+    Carta carta1(1,"Ouro"),carta2(2,"Espadas"),carta3(3,"Copas"), carta4(5,"Paus");
+    cout << "Jogador: " << player.getNome() << endl;
+    player.addCarta(carta1);
+    player.addCarta(carta2);
+    player.addCarta(carta3);
+    player.addCarta(carta4);
+    player.getMao().mostraLista();
+    cout << endl << player.getPontuacao();*/
 
     /*Lista<Carta> mylist;
-    Carta carta1(10,4),carta2(11,5),carta3(12,6);
+    Carta carta1(10,"Paus"),carta2(11,"Copas"),carta3(12,"Espadas");
     mylist.insereElemento(carta1,1);
     mylist.insereElemento(carta2,2);
     mylist.insereElemento(carta3,3);

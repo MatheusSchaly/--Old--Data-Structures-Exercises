@@ -16,12 +16,13 @@ public:
     void insereElemento(T, int);
     void removeElemento(int);
     void mostraLista();
+    int getTamanho();
+    T getElemento(int);
 
     Nodo<T>* getHead();
     void setHead(Nodo<T>*);
     Nodo<T>* getTail();
     void setTail(Nodo<T>*);
-    int getTamanho();
 };
 
 #endif // LISTA_H_INCLUDED

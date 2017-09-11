@@ -3,15 +3,18 @@
 
 #include "Carta.h"
 #include "Lista.h"
-/*
+
 class Jogador {
-    Lista<Carta> listaCarta;
-    int quantCartas;
-    void addQuant funkCartas();
+    string nome;
+    Lista<Carta> mao;
+    int pontuacao;
 public:
-    void addCarta();
-    Lista getListaCarta();
-    int getQuantCartas();
-};*/
+    Jogador(string);
+    void addCarta(Carta);
+    Lista<Carta>& getMao();
+    void addPontuacao(int);
+    int getPontuacao();
+    string getNome();
+};
 
 #endif // JOGADOR_H_INCLUDED

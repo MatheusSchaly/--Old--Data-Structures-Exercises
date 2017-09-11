@@ -34,24 +34,25 @@
 1505084966 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\carta.h
 	<iostream>
 
-1505064657 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.cpp
+1505090476 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.cpp
 	"Jogador.h"
 
-1505083534 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.h
+1505090709 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\jogador.h
 	"Carta.h"
 	"Lista.h"
 
-1505085029 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.h
+1505088045 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.h
 	"Nodo.h"
 
 1505081543 c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\nodo.h
 	"Carta.h"
 	<iostream>
 
-1505085077 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.cpp
+1505088270 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\lista.cpp
 	"Lista.h"
 
-1505084690 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\main.cpp
+1505090489 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\main.cpp
+	"Jogador.h"
 	"Lista.h"
 	"Nodo.h"
 	"Carta.h"
