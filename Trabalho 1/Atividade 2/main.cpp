@@ -3,7 +3,92 @@
 #include "Nodo.h"
 #include "Carta.h"
 
+void criaMonte (Lista<Carta> &monte) {
+    string naipes[4] = {"paus", "espadas", "copas", "ouros"};
+    for (int i = 0; i < 4; i++) {
+        for (int j = 1; j < 14; j++) {
+            Carta carta(j, naipes[i]);
+            monte.insereElemento(carta, 1);
+        }
+    }
+}
+
+Carta compraCartaMonte(Lista<Carta> monte, int indice) {
+    Carta cartaComprada = monte.getElemento(indice);
+    monte.removeElemento(indice + 1);
+    return cartaComprada;
+}
+
 int main() {
+
+    Lista<Carta> monte;
+    criaMonte(monte);
+
+    string nomeJogador;
+    cout << "Entre seu nome: ";
+    cin >> nomeJogador;
+    Jogador usuario(nomeJogador);
+    Jogador ia("Ned");
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            int randomInt = rand() % 52;
+            Carta carta = monte.getElemento(randomInt + 1 - j - i); // continuar aki
+            monte.removeElemento(randomInt + 1);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*Jogador player("Mauricio");
     Carta carta1(1,"Ouro"),carta2(2,"Espadas"),carta3(3,"Copas"), carta4(5,"Paus");
