@@ -33,7 +33,7 @@ int main()
 
         case 2:
                 cout << "DIGITE 0 PARA VOLTAR AO MENU PRINCIPAL" << endl;
-                cout << "Qual lista você deseja destruir?" << endl;
+                cout << "Qual lista vocÃª deseja destruir?" << endl;
                 for (int i=0;i<listas.size();i++)
                 {
                     cout << "Lista " << i+1 << ": " << endl;
@@ -71,7 +71,7 @@ int main()
             {
                 char elemento;
                 cout << "DIGITE 0 PARA VOLTAR AO MENU PRINCIPAL" << endl;
-                cout << "Qual lista você deseja adicionar elemento?" << endl;
+                cout << "Qual lista vocÃª deseja adicionar elemento?" << endl;
                 for (int i=0;i<listas.size();i++)
                 {
                     cout << "Lista " << i+1 << ": " << endl;
@@ -96,7 +96,7 @@ int main()
             {
                 char elemento;
                 cout << "DIGITE 0 PARA VOLTAR AO MENU PRINCIPAL" << endl;
-                cout << "Qual lista você deseja remover elemento?" << endl;
+                cout << "Qual lista vocÃª deseja remover elemento?" << endl;
                 for (int i=0;i<listas.size();i++)
                 {
                     cout << "Lista " << i+1 << ": " << endl;
@@ -122,6 +122,5 @@ int main()
         }
     }
     while (opcao != 6);
-    listas.at(1)->mostraLista();
     return 0;
 }
