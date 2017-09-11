@@ -2,6 +2,7 @@
 #include "Lista.h"
 #include "Nodo.h"
 #include "Carta.h"
+#include <stdlib.h>
 
 void criaMonte (Lista<Carta> &monte) {
     string naipes[4] = {"paus", "espadas", "copas", "ouros"};
@@ -13,10 +14,37 @@ void criaMonte (Lista<Carta> &monte) {
     }
 }
 
-Carta compraCartaMonte(Lista<Carta> monte, int indice) {
-    Carta cartaComprada = monte.getElemento(indice);
-    monte.removeElemento(indice + 1);
-    return cartaComprada;
+void mostraMesa (Jogador usuario, Jogador ia) {
+    cout << "\nCartas dos jogadores:\n";
+    cout << usuario.getNome() << ":" << endl;
+    usuario.mostraMao();
+    cout << endl << ia.getNome() << ":"<< endl;
+    Carta carta = ia.getMao().getElemento(1);
+    cout << carta;
+}
+
+int leMenu () {
+    int opcao;
+    do {
+        cout << "\nSelecione:\n";
+        cout << "1 - Hit\n";
+        cout << "2 - Stay\n";
+        cin >> opcao;
+    } while (opcao < 1 || opcao > 2);
+    return opcao;
+}
+
+Jogador* checaVencedor (Jogador usuario, Jogador ia) {
+    if (usuario.getPontuacao() > 21) {
+        return &ia;
+    }
+    if (ia.getPontuacao() > 0) {
+        if (usuario > ia) {
+            return &usuario;
+        }
+        return &ia;
+    }
+    return NULL;
 }
 
 int main() {
@@ -26,69 +54,60 @@ int main() {
 
     string nomeJogador;
     cout << "Entre seu nome: ";
+
     cin >> nomeJogador;
     Jogador usuario(nomeJogador);
     Jogador ia("Ned");
+    Lista<Carta> cartasInicio;
+    int randomInt;
+    Carta carta;
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            int randomInt = rand() % 52;
-            Carta carta = monte.getElemento(randomInt + 1 - j - i); // continuar aki
-            monte.removeElemento(randomInt + 1);
+    for (int i = 0; i < 4; i+= 2) {
+        for (int j = i; j < i + 2; j++) {
+            randomInt = rand() % (52 - j) + 1; // 1 a (52 -j)
+            carta = monte.getElemento(randomInt);
+            cartasInicio.insereElemento(carta, 1);
+            monte.removeElemento(randomInt);
         }
     }
 
+    for (int i = 0; i < 2; i++) {
+        usuario.addCarta(cartasInicio.getElemento(i));
+    }
 
+    for (int i = 2; i < 4; i++) {
+        ia.addCarta(cartasInicio.getElemento(i));
+    }
 
+    int opcao, randomAux = -1;
+    Jogador *vencedor;
 
+    do {
+        mostraMesa(usuario, ia);
+        opcao = leMenu();
+        cout << randomAux;
+        if (opcao == 1) {
+            randomAux++;
+            randomInt = rand() % (48 - randomAux) + 1; // 1 a (48 - randomAux)
+            carta = monte.getElemento(randomInt);
+            usuario.addCarta(carta);
+            monte.removeElemento(randomInt);
+        }
+        else {
+           do {
+                randomInt = rand() % (48 - randomAux) + 1; // 1 a (48 - randomAux)
+                carta = monte.getElemento(randomInt);
+                ia.addCarta(carta);
+                monte.removeElemento(randomInt);
+                randomAux++;
+            } while (ia.getPontuacao() < 17);
+        }
+        vencedor = checaVencedor(usuario, ia);
+    } while(vencedor == NULL);
 
+    cout << vencedor -> getNome() << "venceu com " << vencedor -> getPontuacao() << " pontos!" endl;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
     /*Jogador player("Mauricio");
     Carta carta1(1,"Ouro"),carta2(2,"Espadas"),carta3(3,"Copas"), carta4(5,"Paus");
@@ -204,5 +223,3 @@ int main() {
 //    cout << myList.verificaElemento(5) << endl; // 0
 //    myList.removeElemento(2); // 10
 //    cout << myList.verificaElemento(15) << endl; // 0
-    return 0;
-}

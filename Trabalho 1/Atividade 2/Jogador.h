@@ -12,9 +12,11 @@ public:
     Jogador(string);
     void addCarta(Carta);
     Lista<Carta>& getMao();
+    void mostraMao();
     void addPontuacao(int);
     int getPontuacao();
     string getNome();
+    friend bool operator > (Jogador &jogador1, Jogador &jogador2);
 };
 
 #endif // JOGADOR_H_INCLUDED

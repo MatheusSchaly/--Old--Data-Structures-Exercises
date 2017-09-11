@@ -6,7 +6,7 @@ bool operator == (Carta &carta1, Carta &carta2) {
 
 ostream& operator << (ostream &out, Carta &carta)
 {
-    cout << carta.getValor() << "  " << carta.getNaipe();
+    cout << carta.getValor() << "\t" << carta.getNaipe() << endl;
     return out;
 }
 

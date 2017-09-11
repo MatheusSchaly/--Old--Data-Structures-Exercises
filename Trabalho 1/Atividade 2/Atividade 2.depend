@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1505091954 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/main.cpp
+1505151492 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/main.cpp
 	"Jogador.h"
 	"Lista.h"
 	"Nodo.h"
 	"Carta.h"
+	<stdlib.h>
 
-1505091561 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.cpp
+1505151251 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.cpp
 	"Lista.h"
 
 1505091561 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Lista.h
@@ -18,17 +19,17 @@
 1505091561 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Nodo.cpp
 	"Nodo.h"
 
-1505091561 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.cpp
+1505147343 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.cpp
 	"Carta.h"
 
 1505091561 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Carta.h
 	<iostream>
 
-1505091561 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.h
+1505150025 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.h
 	"Carta.h"
 	"Lista.h"
 
-1505091561 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.cpp
+1505150069 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 2/Jogador.cpp
 	"Jogador.h"
 
 1505084966 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 2\carta.cpp

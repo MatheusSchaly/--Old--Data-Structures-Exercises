@@ -16,6 +16,13 @@ Lista<Carta>& Jogador::getMao() {
     return mao;
 }
 
+void Jogador::mostraMao() {
+    for (int i = 0; i < getMao().getTamanho(); i++) {
+        Carta carta = getMao().getElemento(i);
+        cout << carta;
+    }
+}
+
 void Jogador::addPontuacao(int valor)
 {
     if (valor>10)
@@ -55,4 +62,8 @@ int Jogador::getPontuacao()
 string Jogador::getNome()
 {
     return nome;
+}
+
+bool operator > (Jogador &jogador1, Jogador &jogador2) {
+    return jogador1.getPontuacao() > jogador2.getPontuacao();
 }
