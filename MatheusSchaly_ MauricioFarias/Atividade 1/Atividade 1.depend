@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1504814759 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/ListaEstatica.cpp
+1505215233 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/ListaEstatica.cpp
 	"ListaEstatica.h"
 
-1504814152 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/ListaEstatica.h
+1505215233 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/ListaEstatica.h
 	<iostream>
 
-1504814697 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/main.cpp
+1505215233 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Trabalho 1/Atividade 1/main.cpp
 	"ListaEstatica.h"
+	<vector>
+	<iostream>
 
 1504998115 source:c:\users\mauricio\desktop\data-structures-exercises\trabalho 1\atividade 1\main.cpp
 	"ListaEstatica.h"
