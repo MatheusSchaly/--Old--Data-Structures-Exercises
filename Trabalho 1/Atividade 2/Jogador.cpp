@@ -4,6 +4,7 @@ Jogador::Jogador(string nome)
 {
     this->nome = nome;
     this->pontuacao = 0;
+    this->azesModificados = 0;
 }
 
 void Jogador::addCarta(Carta carta)
@@ -18,6 +19,7 @@ Lista<Carta>& Jogador::getMao() {
 
 void Jogador::addPontuacao(int valor)
 {
+    int contAz = azesModificados;
     if (valor>10)
     {
         pontuacao += 10;
@@ -40,7 +42,15 @@ void Jogador::addPontuacao(int valor)
         {
             if (mao.getElemento(i).getValor() == 1)
             {
-                pontuacao -= 10;
+                if (contAz < 1)
+                {
+                    pontuacao -= 10;
+                    azesModificados++;
+                }
+                else
+                {
+                    contAz--;
+                }
                 break;
             }
         }

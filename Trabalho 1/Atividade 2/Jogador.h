@@ -8,6 +8,7 @@ class Jogador {
     string nome;
     Lista<Carta> mao;
     int pontuacao;
+    int azesModificados;
 public:
     Jogador(string);
     void addCarta(Carta);
