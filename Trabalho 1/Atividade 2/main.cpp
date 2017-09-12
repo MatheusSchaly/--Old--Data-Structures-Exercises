@@ -19,7 +19,7 @@ void mostraMesa (Jogador &usuario, Jogador &ia) {
     cout << "\nCartas dos jogadores:\n";
     cout << usuario.getNome() << ":" << endl;
     usuario.getMao().mostraLista();
-    cout << endl << "Score: " << usuario.getPontuacao();
+    cout << "Score: " << usuario.getPontuacao();
     cout << endl << ia.getNome() << ":"<< endl;
     Carta carta = ia.getMao().getElemento(1);
     cout << carta;
@@ -75,7 +75,7 @@ int main() {
     for (int i=0;i<2;i++)
     {
         srand(time(0));
-        randomInt = rand() % (52 - randomAux) + 1; // 1 a (52 -j)
+        randomInt = rand() % (52 - randomAux) + 1;
         carta = monte.getElemento(randomInt);
         usuario.addCarta(carta);
         monte.removeElemento(randomInt);
@@ -85,7 +85,7 @@ int main() {
     for (int i=0;i<2;i++)
     {
         srand(time(0));
-        randomInt = rand() % (52 - randomAux) + 1; // 1 a (52 -j)
+        randomInt = rand() % (52 - randomAux) + 1;
         carta = monte.getElemento(randomInt);
         ia.addCarta(carta);
         monte.removeElemento(randomInt);
@@ -106,7 +106,7 @@ int main() {
         case 1:
             randomAux++;
             srand(time(0));
-            randomInt = rand() % (48 - randomAux) + 1; // 1 a (48 - randomAux)
+            randomInt = rand() % (48 - randomAux) + 1;
             carta = monte.getElemento(randomInt);
             cout << "Carta Comprada: " << carta;
             usuario.addCarta(carta);
@@ -117,7 +117,7 @@ int main() {
             while (ia.getPontuacao() < 17)
             {
                 srand(time(0));
-                randomInt = rand() % (48 - randomAux) + 1; // 1 a (48 - randomAux)
+                randomInt = rand() % (48 - randomAux) + 1;
                 carta = monte.getElemento(randomInt);
                 ia.addCarta(carta);
                 monte.removeElemento(randomInt);
@@ -138,7 +138,13 @@ int main() {
 
     } while(vencedor == NULL);
 
-    cout << vencedor -> getNome() << " venceu com " << vencedor -> getPontuacao() << " pontos!" << endl;
+    cout << "\nMao final " << usuario.getNome() << ": \n";
+    usuario.getMao().mostraLista();
+    cout << "Score: " << usuario.getPontuacao() << endl;
+    cout << "\nMao final Ned: \n";
+    ia.getMao().mostraLista();
+    cout << "Score: " << ia.getPontuacao() << endl;
+    cout << endl << vencedor -> getNome() << " venceu com " << vencedor -> getPontuacao() << " pontos!" << endl;
 
     return 0;
 }
