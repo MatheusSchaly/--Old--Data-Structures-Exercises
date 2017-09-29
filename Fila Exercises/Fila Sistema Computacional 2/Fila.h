@@ -10,7 +10,7 @@ private:
     int numeroElementos, inicio, fim;
     T elementos[tamanho];
 public :
-    Fila ();
+    Fila
     ~Fila ();
     bool ehVazia();
     bool temEspaco();

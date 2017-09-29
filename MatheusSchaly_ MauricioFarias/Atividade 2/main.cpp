@@ -1,7 +1,7 @@
-#include "Jogador.h"
-#include "Lista.h"
-#include "Nodo.h"
-#include "Carta.h"
+#include "Jogador.cpp"
+#include "Lista.cpp"
+#include "Nodo.cpp"
+#include "Carta.cpp"
 #include <stdlib.h>
 #include <ctime>
 

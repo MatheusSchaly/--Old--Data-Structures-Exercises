@@ -1,13 +1,13 @@
 #include "Lista.h"
 
-template <typename T>
+template <class T>
 Lista<T>::Lista() {
     head = NULL;
     tail = NULL;
     tamanho = 0;
 }
 
-template <typename T>
+template <class T>
 Lista<T>::~Lista() {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
@@ -17,7 +17,7 @@ Lista<T>::~Lista() {
     }
 }
 
-template <typename T>
+template <class T>
 bool Lista<T>::verificaElemento(T elemento) {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
@@ -30,7 +30,7 @@ bool Lista<T>::verificaElemento(T elemento) {
     return false;
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::insereElemento(T elemento, int posicao) {
     if (getTamanho() == 0) {
         Nodo<T> *novoNodo = new Nodo<T>(elemento);
@@ -61,7 +61,7 @@ void Lista<T>::insereElemento(T elemento, int posicao) {
     aumentaTamanho();
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::removeElemento(int posicao) {
     if (getTamanho() == 1) {
         delete getHead();
@@ -99,7 +99,7 @@ void Lista<T>::removeElemento(int posicao) {
     diminuiTamanho();
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::mostraLista() {
     Nodo<T> *temp = getHead();
     for (int i = 0; i < getTamanho(); i++) {
@@ -109,42 +109,42 @@ void Lista<T>::mostraLista() {
     }
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::aumentaTamanho() {
     tamanho++;
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::diminuiTamanho() {
     tamanho--;
 }
 
-template <typename T>
+template <class T>
 Nodo<T>* Lista<T>::getHead() {
     return head;
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::setHead(Nodo<T>* head) {
     this -> head = head;
 }
 
-template <typename T>
+template <class T>
 Nodo<T>* Lista<T>::getTail() {
     return tail;
 }
 
-template <typename T>
+template <class T>
 void Lista<T>::setTail(Nodo<T>* tail) {
     this -> tail = tail;
 }
 
-template <typename T>
+template <class T>
 int Lista<T>::getTamanho() {
     return tamanho;
 }
 
-template <typename T>
+template <class T>
 T Lista<T>::getElemento(int posicao)
 {
     Nodo<T>* temp = getHead();
@@ -155,7 +155,7 @@ T Lista<T>::getElemento(int posicao)
     return temp->getData();
 }
 
-template class Lista<int>;
-template class Lista<float>;
-template class Lista<string>;
-template class Lista<Carta>;
+//template class Lista<int>;
+//template class Lista<float>;
+//template class Lista<string>;
+//template class Lista<Carta>;

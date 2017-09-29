@@ -3,7 +3,7 @@
 
 #include "Nodo.h"
 
-template <typename T>
+template <class T>
 class Lista {
     Nodo<T> *head, *tail;
     int tamanho;

@@ -17,7 +17,7 @@ using namespace std;
 int main()
 {
     Fila<int> taxis, passageiros;
-    int quantTaxi, quantPassageiros, taxisUtilizados = 0;
+    int quantTaxi, quantPassageiros, taxisUtilizados = 0, tempoTotal, totalPessoas;
 
     srand(time(NULL));
 
@@ -31,14 +31,17 @@ int main()
         if (i % 3 == 0) {
             quantPassageiros = rand() % 3;
             for (int j = 0; j < quantPassageiros; j++) {
-                passageiros.insere(j);
+                passageiros.insere(i);
             }
         }
         if (!(taxis.ehVazia() && passageiros.ehVazia())) {
+            tempoTotal = passageiros.primeiro();
             passageiros.retira();
             taxis.retira();
             taxisUtilizados++;
         }
     }
     cout << "Taxis Utilizados: " << taxisUtilizados << endl;
+    totalPessoas = taxisUtilizados + passageiros.numeroDeElementos();
+    cout << tempoTotal / totalPessoas;
 }

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-template <typename T>
+template <class T>
 class Nodo {
     Nodo<T> *next;
     T data;

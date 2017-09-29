@@ -135,18 +135,6 @@ void Fila<T>::mostra()
 }
 
 template<class T>
-int Fila<T>::getInicio()
-{
-    return inicio;
-}
-
-template<class T>
-int Fila<T>::getFim()
-{
-    return fim;
-}
-
-template<class T>
 bool Fila<T>::elementosIguais(Fila<T> filaComparada)
 {
     if (numeroElementos == 0 || filaComparada.numeroDeElementos() == 0) {
@@ -157,14 +145,13 @@ bool Fila<T>::elementosIguais(Fila<T> filaComparada)
     T elemento;
     for (int i = 0; i < numeroElementos; i++) {
         posicao1 ++;
-        posicao2 = filaComparada.getInicio();
+        posicao2 = filaComparada.primeiro();
         if (posicao1 == tamanho) {
             posicao1 = 0;
         }
         for (int j = 0; j < filaComparada.numeroDeElementos(); j++) {
-            posicao2 ++;
             if (posicao2 == tamanho) {
-                posicao2 = 1;
+                posicao2 = 0;
             }
             if (elementos[posicao1] == filaComparada.umElemento(posicao2)) {
                 break;
@@ -172,6 +159,7 @@ bool Fila<T>::elementosIguais(Fila<T> filaComparada)
             if (j == filaComparada.numeroDeElementos() - 1) {
                 return false;
             }
+            posicao2 ++;
         }
     }
     return true;

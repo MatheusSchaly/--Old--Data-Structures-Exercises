@@ -28,7 +28,7 @@
 	<iostream>
 	"Fila.h"
 
-1506290314 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Base/Fila.cpp
+1506358630 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Base/Fila.cpp
 	<iostream>
 	"Fila.h"
 
@@ -39,22 +39,7 @@
 	<stdlib.h>
 	"Fila.cpp"
 
-1506290314 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Base/Fila.cpp
-	<iostream>
-	"Fila.h"
-
-1506290314 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Taxi/Fila.cpp
-	<iostream>
-	"Fila.h"
-
-1506288169 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Taxi/Fila.h
-
-1506290352 source:/home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Taxi/main.cpp
-	<iostream>
-	<stdlib.h>
-	"Fila.cpp"
-
-1506290314 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Taxi/Fila.cpp
+1506358630 /home/hsmatheus/Documents/GitRepo/Data-Structures-Exercises/Fila/Fila Base/Fila.cpp
 	<iostream>
 	"Fila.h"
 
