@@ -15,7 +15,14 @@ PriorityQueue::~PriorityQueue() {
     }
 }
 
-int PriorityQueue::findElement(int data) {
+int PriorityQueue::isEmpty() {
+    if (queueSize == 0) {
+        return true;
+    }
+    return false;
+}
+
+bool PriorityQueue::findElement(int data) {
     Node *temp = head;
     while (temp != NULL) {
         if (temp -> getData() == data) {
@@ -45,7 +52,7 @@ void PriorityQueue::insertElement(int data, int priority) {
 }
 
 void PriorityQueue::removeElement() {
-    // It must be check IN MAIN if the list has no elements
+    // It must be checked IN MAIN if the list has no elements
     queueSize--;
     // First corner case (there is just one element)
     if (queueSize == 0) {
@@ -92,7 +99,7 @@ void PriorityQueue::print() {
     Node *temp = head;
     cout << "Queue size: " << queueSize << "\n\n";
     while (temp != NULL) {
-        cout << "Data: " << temp -> getData() << "\nPriority: " << temp -> getPriority() << "\n\n";
+        cout << "Data: " << temp -> getData() << "\nPriority: " << temp -> getPriority() << "\n";
         temp = temp -> getNext();
     }
 }
