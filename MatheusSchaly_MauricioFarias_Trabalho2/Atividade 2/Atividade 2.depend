@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1507143250 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\main.cpp
+	<iostream>
+	"PriorityQueue.h"
+
+1507143293 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.cpp
+	"PriorityQueue.h"
+
+1507143830 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.h
+	"Node.h"
+
+1507143727 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.h
+	<iostream>
+
+1507143801 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.cpp
+	"Node.h"
+
