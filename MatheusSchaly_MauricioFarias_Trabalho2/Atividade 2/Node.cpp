@@ -1,15 +1,10 @@
 #include "Node.h"
 
-Node::Node() {
+Node::Node(int data, int priority) {
     next = NULL;
     prev = NULL;
-    data = 0;
-}
-
-Node::Node(Node *next, Node *prev) {
-    this -> next = next;
-    this -> prev = prev;
     this -> data = data;
+    this -> priority = priority;
 }
 
 void Node::setNext(Node *next) {
@@ -28,16 +23,8 @@ Node* Node::getPrev() {
     return prev;
 }
 
-void Node::setData(int data) {
-    this -> data = data;
-}
-
 int Node::getData() {
     return data;
-}
-
-void Node::setPriority(int priority) {
-    this -> priority = priority;
 }
 
 int Node::getPriority() {

@@ -9,8 +9,8 @@ class PriorityQueue {
 public:
     PriorityQueue();
     ~PriorityQueue();
-    int findElement();
-    void insertElement();
+    int findElement(int data);
+    void insertElement(int data, int priority);
     void removeElement();
     void print();
 };

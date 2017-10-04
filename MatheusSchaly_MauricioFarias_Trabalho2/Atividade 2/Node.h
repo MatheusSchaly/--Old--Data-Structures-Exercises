@@ -10,15 +10,12 @@ class Node {
     int data;
     int priority;
 public:
-    Node();
-    Node(Node *next = NULL, Node *prev = NULL);
+    Node(int data, int priority);
     void setNext(Node *next);
     Node* getNext();
     void setPrev(Node *prev);
     Node* getPrev();
-    void setData(int data);
     int getData();
-    void setPriority(int priority);
     int getPriority();
 };
 
