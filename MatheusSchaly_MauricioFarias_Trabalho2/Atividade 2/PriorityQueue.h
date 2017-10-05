@@ -9,7 +9,7 @@ class PriorityQueue {
 public:
     PriorityQueue();
     ~PriorityQueue();
-    int isEmpty();
+    bool isEmpty();
     bool elementExistence(int data);
     void insertElement(int data, int priority);
     void removeElement();

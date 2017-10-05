@@ -15,7 +15,7 @@ PriorityQueue::~PriorityQueue() {
     }
 }
 
-int PriorityQueue::isEmpty() {
+bool PriorityQueue::isEmpty() {
     return queueSize == 0;
 }
 
