@@ -22,6 +22,8 @@ int main()
             cin >> option;
         } while (option < 0 || option > 4);
 
+        cout << endl;
+
         switch (option) {
         case 1:
             cout << "Enter the data: ";
@@ -43,10 +45,10 @@ int main()
         case 3:
             if (pq.isEmpty()) {
                 cout << "There are no elements to be deleted.\n";
-                break;
+            } else {
+                pq.removeElement();
+                cout << "An element was deleted.\n";
             }
-            pq.removeElement();
-            cout << "An element was deleted.\n";
             break;
         case 4:
             pq.print();
