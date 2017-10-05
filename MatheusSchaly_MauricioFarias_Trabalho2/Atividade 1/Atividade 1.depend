@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1507167738 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\main.cpp
+1507226208 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\main.cpp
 	<iostream>
 	"Deque.h"
 
-1507167291 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\deque.h
+1507226149 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\deque.h
 	<iostream>
 
-1507167506 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\deque.cpp
+1507225988 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 1\deque.cpp
 	"Deque.h"
 

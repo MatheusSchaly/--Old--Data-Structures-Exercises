@@ -8,7 +8,7 @@ using namespace std;
 const int dequeSize = 100;
 
 class Deque {
-    int elements [100], elementsQuantity, right, left;
+    int elements [dequeSize], elementsQuantity, right, left;
 public:
     Deque();
     void pushRight(int data);

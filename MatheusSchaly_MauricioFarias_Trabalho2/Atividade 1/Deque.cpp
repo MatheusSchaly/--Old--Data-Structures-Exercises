@@ -84,4 +84,5 @@ void Deque::print() {
             j = 0;
         }
     }
+    cout << endl;
 }
