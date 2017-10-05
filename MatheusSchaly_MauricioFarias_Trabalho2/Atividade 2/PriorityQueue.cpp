@@ -16,13 +16,10 @@ PriorityQueue::~PriorityQueue() {
 }
 
 int PriorityQueue::isEmpty() {
-    if (queueSize == 0) {
-        return true;
-    }
-    return false;
+    return queueSize == 0;
 }
 
-bool PriorityQueue::findElement(int data) {
+bool PriorityQueue::elementExistence(int data) {
     Node *temp = head;
     while (temp != NULL) {
         if (temp -> getData() == data) {

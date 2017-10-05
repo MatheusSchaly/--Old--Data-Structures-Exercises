@@ -26,7 +26,7 @@ int main()
         case 1:
             cout << "Enter the data: ";
             cin >> data;
-            if (pq.findElement(data)) {
+            if (pq.elementExistence(data)) {
                 cout << "The element exists.\n";
             }
             else {

@@ -10,7 +10,7 @@ public:
     PriorityQueue();
     ~PriorityQueue();
     int isEmpty();
-    bool findElement(int data);
+    bool elementExistence(int data);
     void insertElement(int data, int priority);
     void removeElement();
     void print();
