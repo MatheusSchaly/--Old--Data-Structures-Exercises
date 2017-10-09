@@ -5,17 +5,18 @@
 
 using namespace std;
 
+template <class T>
 class Node {
     Node *next, *prev;
-    int data;
+    T data;
     int priority;
 public:
-    Node(int data, int priority);
-    void setNext(Node *next);
-    Node* getNext();
-    void setPrev(Node *prev);
-    Node* getPrev();
-    int getData();
+    Node(T data, int priority);
+    void setNext(Node<T> *next);
+    Node<T>* getNext();
+    void setPrev(Node<T> *prev);
+    Node<T>* getPrev();
+    T getData();
     int getPriority();
 };
 

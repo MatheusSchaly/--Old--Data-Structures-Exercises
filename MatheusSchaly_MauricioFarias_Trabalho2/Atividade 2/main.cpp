@@ -1,14 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 
-#include "PriorityQueue.h"
+#include "PriorityQueue.cpp"
 
 using namespace std;
 
 int main()
 {
-    PriorityQueue pq;
+    const char *clr;
+    PriorityQueue<int> pq;
     int option, data, priority;
+
+    if (_WIN32)
+        clr = "cls";
+    else
+        clr = "clear";
 
     do {
 
@@ -20,9 +26,8 @@ int main()
             cout << "4 - Print queue.\n";
             cout << "0 - Exit program.\n";
             cin >> option;
+            system(clr);
         } while (option < 0 || option > 4);
-
-        cout << endl;
 
         switch (option) {
         case 1:
@@ -34,6 +39,9 @@ int main()
             else {
                 cout << "The element doesn't exist.\n";
             }
+            cin.ignore();
+            cin.get();
+            system(clr);
             break;
         case 2:
             cout << "Enter the data: ";
@@ -41,6 +49,10 @@ int main()
             cout << "Enter the priority: ";
             cin >> priority;
             pq.insertElement(data, priority);
+            cout << "Element inserted.";
+            cin.ignore();
+            cin.get();
+            system(clr);
             break;
         case 3:
             if (pq.isEmpty()) {
@@ -49,11 +61,18 @@ int main()
                 pq.removeElement();
                 cout << "An element was deleted.\n";
             }
+            cin.ignore();
+            cin.get();
+            system(clr);
             break;
         case 4:
             pq.print();
+            cin.ignore();
+            cin.get();
+            system(clr);
         }
 
     } while (option != 0);
+    cout << "Program exited";
 
 }

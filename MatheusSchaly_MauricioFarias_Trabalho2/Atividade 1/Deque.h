@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int dequeSize = 100;
+const int dequeSize = 5;
 
 class Deque {
     int elements [dequeSize], elementsQuantity, right, left;

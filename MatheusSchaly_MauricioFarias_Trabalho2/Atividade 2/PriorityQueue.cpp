@@ -1,13 +1,15 @@
 #include "PriorityQueue.h"
 
-PriorityQueue::PriorityQueue() {
+template <class T>
+PriorityQueue<T>::PriorityQueue() {
     head = NULL;
     tail = NULL;
     queueSize = 0;
 }
 
-PriorityQueue::~PriorityQueue() {
-    Node *temp = head;
+template <class T>
+PriorityQueue<T>::~PriorityQueue() {
+    Node<T> *temp = head;
     while (temp != NULL) {
         head = head -> getNext();
         delete temp;
@@ -15,12 +17,14 @@ PriorityQueue::~PriorityQueue() {
     }
 }
 
-bool PriorityQueue::isEmpty() {
+template <class T>
+bool PriorityQueue<T>::isEmpty() {
     return queueSize == 0;
 }
 
-bool PriorityQueue::elementExistence(int data) {
-    Node *temp = head;
+template <class T>
+bool PriorityQueue<T>::elementExistence(T data) {
+    Node<T> *temp = head;
     while (temp != NULL) {
         if (temp -> getData() == data) {
             return true;
@@ -34,21 +38,23 @@ bool PriorityQueue::elementExistence(int data) {
     Inserts and element at the queue's end (tail).
 */
 
-void PriorityQueue::insertElement(int data, int priority) {
-    Node *newNode = new Node(data, priority);
-    if (queueSize == 0) {
+template <class T>
+void PriorityQueue<T>::insertElement(T data, int priority) {
+    Node<T> *newNode = new Node<T>(data, priority);
+    if (queueSize == 0) { //In case of no elements in the queue
         head = newNode;
         tail = newNode;
         queueSize ++;
         return;
     }
-    newNode -> setPrev(tail);
+    newNode -> setPrev(tail); //In case of at least one element in the queue
     tail -> setNext(newNode);
     tail = newNode;
     queueSize ++;
 }
 
-void PriorityQueue::removeElement() {
+template <class T>
+void PriorityQueue<T>::removeElement() {
     // It must be checked IN MAIN if the list has no elements
     queueSize--;
     // First corner case (there is just one element)
@@ -58,7 +64,7 @@ void PriorityQueue::removeElement() {
         tail = NULL;
         return;
     }
-    Node *temp = head;
+    Node<T> *temp = head;
     int highestPriority = temp -> getPriority();
     while (temp -> getNext() != NULL) { // Finds the element that has the highest priority
         temp = temp -> getNext();
@@ -92,11 +98,12 @@ void PriorityQueue::removeElement() {
     delete temp;
 }
 
-void PriorityQueue::print() {
-    Node *temp = head;
+template <class T>
+void PriorityQueue<T>::print() {
+    Node<T> *temp = head;
     cout << "Queue size: " << queueSize << "\n\n";
     while (temp != NULL) {
-        cout << "Data: " << temp -> getData() << "\nPriority: " << temp -> getPriority() << "\n";
+        cout << "Data: " << temp -> getData() << "\tPriority: " << temp -> getPriority() << "\n";
         temp = temp -> getNext();
     }
 }

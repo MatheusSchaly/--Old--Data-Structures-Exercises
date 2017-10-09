@@ -1,17 +1,18 @@
 #ifndef PRIORITYQUEUE_H_INCLUDED
 #define PRIORITYQUEUE_H_INCLUDED
 
-#include "Node.h"
+#include "Node.cpp"
 
+template <class T>
 class PriorityQueue {
-    Node *head, *tail;
+    Node<T> *head, *tail;
     int queueSize;
 public:
     PriorityQueue();
     ~PriorityQueue();
     bool isEmpty();
-    bool elementExistence(int data);
-    void insertElement(int data, int priority);
+    bool elementExistence(T data);
+    void insertElement(T data, int priority);
     void removeElement();
     void print();
 };
