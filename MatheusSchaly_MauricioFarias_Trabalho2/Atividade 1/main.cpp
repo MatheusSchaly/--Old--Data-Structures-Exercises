@@ -5,12 +5,9 @@
 
 using namespace std;
 
-// Remember to try reducing the Deque's capacity to 5 and extrapolate its
-// limits to see if it reacts correctly (it has been already tested and is working perfectly)
-
 int main()
 {
-    const char* clr;
+    const char *clr;
     Deque myDeque;
     int option, data;
 

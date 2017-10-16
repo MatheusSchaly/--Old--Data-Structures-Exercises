@@ -34,14 +34,12 @@ bool PriorityQueue<T>::elementExistence(T data) {
     return false;
 }
 
-/*
-    Inserts and element at the queue's end (tail).
-*/
+// Inserts an element at the queue's end (tail).
 
 template <class T>
 void PriorityQueue<T>::insertElement(T data, int priority) {
     Node<T> *newNode = new Node<T>(data, priority);
-    if (queueSize == 0) { //In case of no elements in the queue
+    if (queueSize == 0) { //In case there is no elements in the queue
         head = newNode;
         tail = newNode;
         queueSize ++;
@@ -55,7 +53,7 @@ void PriorityQueue<T>::insertElement(T data, int priority) {
 
 template <class T>
 void PriorityQueue<T>::removeElement() {
-    // It must be checked IN MAIN if the list has no elements
+    // It is checked IN MAIN if the list has no elements
     queueSize--;
     // First corner case (there is just one element)
     if (queueSize == 0) {
@@ -103,7 +101,7 @@ void PriorityQueue<T>::print() {
     Node<T> *temp = head;
     cout << "Queue size: " << queueSize << "\n\n";
     while (temp != NULL) {
-        cout << "Data: " << temp -> getData() << "\tPriority: " << temp -> getPriority() << "\n";
+        cout << "Data: " << temp -> getData() << " \tPriority: " << temp -> getPriority() << "\n";
         temp = temp -> getNext();
     }
 }

@@ -1,19 +1,19 @@
 # depslib dependency file v1.0
-1507226706 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\main.cpp
+1507673475 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\main.cpp
 	<iostream>
 	<cstdlib>
-	"PriorityQueue.h"
+	"PriorityQueue.cpp"
 
 1507165037 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.cpp
 	"PriorityQueue.h"
 
-1507235610 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.h
-	"Node.h"
+1507673475 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.h
+	"Node.cpp"
 
-1507150315 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.h
+1507673475 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.h
 	<iostream>
 
-1507150315 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.cpp
+1507673475 source:d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.cpp
 	"Node.h"
 
 1507515221 source:c:\users\mauricio\desktop\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\main.cpp
@@ -37,5 +37,11 @@
 	"PriorityQueue.h"
 
 1507514626 c:\users\mauricio\desktop\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.cpp
+	"Node.h"
+
+1507676932 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\priorityqueue.cpp
+	"PriorityQueue.h"
+
+1507673475 d:\gitrepo\data-structures-exercises\matheusschaly_mauriciofarias_trabalho2\atividade 2\node.cpp
 	"Node.h"
 
