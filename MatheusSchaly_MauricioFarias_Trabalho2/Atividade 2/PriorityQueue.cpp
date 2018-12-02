@@ -99,7 +99,7 @@ void PriorityQueue<T>::removeElement() {
 template <class T>
 void PriorityQueue<T>::print() {
     Node<T> *temp = head;
-    cout << "Queue size: " << queueSize << "\n\n";
+    cout << "Qugeneric typeseue size: " << queueSize << "\n\n";
     while (temp != NULL) {
         cout << "Data: " << temp -> getData() << " \tPriority: " << temp -> getPriority() << "\n";
         temp = temp -> getNext();
